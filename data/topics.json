@@ -1,5 +1,4 @@
-{
-	"topics": [
+[
 	{
 		"id": 1,
 		"name": "My first topic!",
@@ -61,4 +60,3 @@
 	}
 ]
 
-}

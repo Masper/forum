@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 3000
+const port = 3000;
+var cors = require('cors');
 
 /* import JSON-objects */
 
@@ -8,6 +9,7 @@ var topicObject = require ('./data/topics');
 var messageObject = require ('./data/message');
 
 /* start server */
+app.use(cors())
 
 app.listen(port, function()
 	{
