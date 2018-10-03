@@ -9,14 +9,14 @@ var topicObject = require ('./data/topics');
 var messageObject = require ('./data/message');
 
 /* start server */
-app.use(cors())
+app.use(cors());
+app.use(express.json()); 
 
 app.listen(port, function()
 	{
 		console.log('Example app listening on port 3000!')
 	}
 	);
-
 
 app.get('/', function(req,res) {
 	res.send('Homepage is active!')
@@ -34,3 +34,10 @@ app.get('/api/message', function(req, res, next) {
 	res.json(messageObject);
 }
 )
+
+app.post('/api/submittopic', function(req, res) {
+	console.log(req.body);
+	res.json("Succes!");
+}
+)
+
